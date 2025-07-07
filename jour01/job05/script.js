@@ -1,13 +1,16 @@
-function bisextile(annee) {
-  if ((annee % 4 === 0 && annee % 100 > 0) || annee % 400 === 0) {
-    return true;
-  } else {
-    return false;
+function affichejourssemaines() {
+  const jourssemaines = [
+    "Lundi",
+    "Mardi",
+    "Mercredi",
+    "Jeudi",
+    "Vendredi",
+    "Samedi",
+    "Dimanche",
+  ];
+  for (let index = 0; index < jourssemaines.length; index++) {
+    const element = jourssemaines[index];
+    console.log(element);
   }
 }
-const res = bisextile(2400);
-if (res) {
-  alert("annee bisextile");
-} else {
-  alert("annee non bisextile");
-}
+affichejourssemaines();
