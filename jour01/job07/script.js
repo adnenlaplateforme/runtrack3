@@ -1,12 +1,11 @@
 function jourtravaille(date) {
+  const date_input = new Date(date)
   const options = {
     weekday: 'long',
     year: 'numeric',
     month: 'long',
     day: 'numeric',
   }
-  console.log(date.toLocaleDateString('fr-FR', options))
-  console.log(date.getDay())
   const jourferriers = [
     new Date(Date.UTC(2000, 0, 1)),
     new Date(Date.UTC(2000, 0, 6)),
@@ -29,22 +28,19 @@ function jourtravaille(date) {
 
   for (let index = 0; index < jourferriers.length; index++) {
     const element = jourferriers[index]
-    if (date - element === 0) {
+    if (date_input - element === 0) {
       console.log(
-        `Le ${date.toLocaleDateString('fr-FR', options)} est un jour ferier`,
+        `Le ${date_input.toLocaleDateString('fr-FR', options)} est un jour ferier`,
       )
-      break
-    } else if (date.getDay() === 0 || date.getDay() === 6) {
+    } else if (date_input.getDay() === 0 || date_input.getDay() === 6) {
       console.log(
-        `Le ${date.toLocaleDateString('fr-FR', options)} est un jour ferier et c'est le weekend`,
+        `Le ${date_input.toLocaleDateString('fr-FR', options)} est un jour ferier et c'est le weekend`,
       )
-      break
     } else {
       console.log(
-        `Le ${date.toLocaleDateString('fr-FR', options)} est un jour travail`,
+        `Le ${date_input.toLocaleDateString('fr-FR', options)} est un jour travail`,
       )
-      break
     }
   }
 }
-jourtravaille(new Date(Date.UTC(2000, 0, 9)))
+jourtravaille(Date.UTC(2000, 1, 1))
