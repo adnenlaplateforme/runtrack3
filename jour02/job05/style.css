@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  min-height: 4096px;
+  z-index: 1;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  min-height: 40px;
+  background-color: aquamarine;
+}
