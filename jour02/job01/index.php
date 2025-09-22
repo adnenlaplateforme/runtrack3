@@ -12,7 +12,7 @@
         La vie a beaucoup plus d'imagination que nous
     </article>
     <button id="button">Button</button>
-    <button onclick="citation2()">Button2</button>
+    <!-- <button onclick="citation2()">Button2</button> -->
 
     <script src="script.js"></script>
 </body>
