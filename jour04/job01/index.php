@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <button id="button">button</button>
+    <button id="button">Voir expression</button>
     <p id="expression"></p>
     <script src="script.js"></script>
 </body>

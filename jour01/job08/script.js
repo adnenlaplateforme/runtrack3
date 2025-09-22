@@ -1,19 +1,32 @@
 function isnombrepremier(a) {
   if (a === 0 || a === 1) {
-    return false
+    return false;
   }
   for (let index = 2; index <= a; index++) {
     if (a % index === 0) {
-      return false
+      return false;
     }
-    return true
+    return true;
   }
 }
 function sommenombrespremiers(a, b) {
   if (isnombrepremier(a) && isnombrepremier(b)) {
-    return a + b
+    return a + b;
   } else {
-    return false
+    return false;
   }
 }
-console.log(sommenombrespremiers(7, 10))
+const form = document.getElementById("form");
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const nombre1 = parseInt(document.getElementById("nbr1").value);
+  const nombre2 = parseInt(document.getElementById("nbr2").value);
+  if (sommenombrespremiers(nombre1, nombre2)) {
+    alert(
+      "La somme des deux nombres est : " +
+        sommenombrespremiers(nombre1, nombre2)
+    );
+  } else {
+    alert("a or b is not a nombre premier");
+  }
+});

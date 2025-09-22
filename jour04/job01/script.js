@@ -1,10 +1,15 @@
-async function afficheExpression(path) {
-  const response = await fetch(path)
-  const expression = await response.text()
-  const button = document.getElementById('button')
-  const elemExpression = document.getElementById('expression')
-  button.addEventListener('click', () => {
-    elemExpression.innerText = expression
-  })
-}
-afficheExpression('http://localhost/runtrack3/jour04/job01/expression.txt')
+document.getElementById("button").addEventListener("click", async () => {
+  try {
+    const response = await fetch("./expression.txt");
+
+    if (!response.ok) {
+      throw new Error("Fichier non trouvé");
+    }
+
+    const texte = await response.text();
+    const elemExpression = document.getElementById("expression");
+    elemExpression.innerText = texte;
+  } catch (error) {
+    console.error("Erreur :", error);
+  }
+});

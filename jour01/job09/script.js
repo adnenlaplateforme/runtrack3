@@ -1,15 +1,13 @@
 function tri(numbers, order) {
-  if (order === 'asc') {
+  if (order === "asc") {
     numbers.sort(function (a, b) {
-      return a - b
-    })
-    return numbers
+      return a - b;
+    });
+    return numbers;
   }
-  numbers
-    .sort(function (a, b) {
-      return a - b
-    })
-    .reverse()
-  return numbers
+  numbers.sort(function (a, b) {
+    return b - a;
+  });
+  return numbers;
 }
-console.log(tri([4, 9, 1, 3, 12, 100], 'asc'))
+console.log(tri([4, 9, 1, 3, 12, 100], "desc"));

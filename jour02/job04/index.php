@@ -9,7 +9,6 @@
 
 <body>
     <textarea name="text" id="keylogger" rows="5">
-
     </textarea>
     <script src="script.js"></script>
 </body>

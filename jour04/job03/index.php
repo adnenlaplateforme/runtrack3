@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job03</title>
+    <title>Filtrer des données JSON dynamiquement avec fetch et les paramètres d’URL</title>
 </head>
 
 <body>
